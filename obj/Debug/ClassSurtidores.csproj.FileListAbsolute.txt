@@ -1,7 +1,0 @@
-A:\Programacion\prueba-tecnica-aseproda\ClassSurtidores\bin\Debug\ClassSurtidores.exe.config
-A:\Programacion\prueba-tecnica-aseproda\ClassSurtidores\bin\Debug\ClassSurtidores.exe
-A:\Programacion\prueba-tecnica-aseproda\ClassSurtidores\bin\Debug\ClassSurtidores.pdb
-A:\Programacion\prueba-tecnica-aseproda\ClassSurtidores\obj\Debug\ClassSurtidores.csproj.AssemblyReference.cache
-A:\Programacion\prueba-tecnica-aseproda\ClassSurtidores\obj\Debug\ClassSurtidores.csproj.CoreCompileInputs.cache
-A:\Programacion\prueba-tecnica-aseproda\ClassSurtidores\obj\Debug\ClassSurtidores.exe
-A:\Programacion\prueba-tecnica-aseproda\ClassSurtidores\obj\Debug\ClassSurtidores.pdb
