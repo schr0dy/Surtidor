@@ -9,13 +9,13 @@ namespace ClassSurtidores
     {
         private static List<Surtidor> surtidores = new List<Surtidor>
         {
-            new Surtidor(1, false),
-            new Surtidor(2, false),
-            new Surtidor(3, false)
+            new Surtidor(1, true),
+            new Surtidor(2, true),
+            new Surtidor(3, true)
         };
         public static void Main(string[] args)
-        {        
-
+        {
+            int idSurtidor = 0;
             h.WriteLine("Elige una operación:\n");
 
             foreach (KeyValuePair<Operaciones.TipoOperaciones, string> operacion in Operaciones.DescripcionesOperaciones)
@@ -46,13 +46,30 @@ namespace ClassSurtidores
             {
                 case Operaciones.TipoOperaciones.LiberarSurtidor:
                     h.WriteLine("Introduce el Id del surtidor a liberar:");
-                    int idSurtidor = Convert.ToInt32(h.ReadLine());
+                    idSurtidor = Convert.ToInt32(h.ReadLine());
                     Surtidor surtidorLiberado = surtidores.FirstOrDefault(x => x.Id == idSurtidor);
                     if (surtidorLiberado != null)
                     {
                         surtidorLiberado.LiberarSurtidor();
                         string estadoSurtidor = surtidorLiberado.Estado ? "Ocupado" : "Libre";
                         h.WriteLine($"Surtidor {surtidorLiberado.Id} liberado. Estado: {estadoSurtidor}");
+                        Main(args);
+                    }
+                    else
+                    {
+                        h.WriteLine($"No se encontró el surtidor con Id {idSurtidor}");
+                    }
+                    break;
+
+                case Operaciones.TipoOperaciones.BloquearSurtidor:
+                    h.WriteLine("Introduce el Id del surtidor a bloquear:");
+                    idSurtidor = Convert.ToInt32(h.ReadLine());
+                    Surtidor surtidorBloqueado = surtidores.FirstOrDefault(x => x.Id == idSurtidor);
+                    if (surtidorBloqueado != null)
+                    {
+                        surtidorBloqueado.OcuparSurtidor();
+                        string estadoSurtidor = surtidorBloqueado.Estado ? "Ocupado" : "Libre";
+                        h.WriteLine($"Surtidor {surtidorBloqueado.Id} bloqueado. Estado: {estadoSurtidor}");
                         Main(args);
                     }
                     else
