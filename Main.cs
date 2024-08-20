@@ -9,9 +9,9 @@ namespace ClassSurtidores
     {
         private static List<Surtidor> surtidores = new List<Surtidor>
         {
-            new Surtidor(1, true),
-            new Surtidor(2, true),
-            new Surtidor(3, true)
+            new Surtidor(1, false),
+            new Surtidor(2, false),
+            new Surtidor(3, false)
         };
         public static void Main(string[] args)
         {
